@@ -24,7 +24,8 @@ class SerializeReport:
         Returns:
             Bytes which contains hash of DataFrame, config, _description_set and _report
         """
-        import pickle
+        # import pickle
+        import dill as pickle
 
         # Note: _description_set and _report may are None if they haven't been computed
         return pickle.dumps(
@@ -46,7 +47,8 @@ class SerializeReport:
         Returns:
             self
         """
-        import pickle
+        # import pickle
+        import dill as pickle
 
         try:
             (
